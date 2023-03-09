@@ -15,11 +15,13 @@ function PokemonList() {
         <div>
             <h1 className={styles.title}>Pokemon List</h1>
             <div className={styles.pokemonlist}>
-                {pokemon.map(({id, name, sprites, types}) => (
+                {pokemon.map(({id, name, sprites, types, height, weight}) => (
                     <div className={styles.pokemoncard} key={id}>
                         <img src={sprites.front_default} className={styles.image}/>
                         <h1 className={styles.name}>{name}</h1>
                         <h2 className={styles.type}>Type: {types[0].type.name}</h2>
+                        <h2 className={styles.height}>Height: {height}</h2>
+                        <h2 className={styles.weight}>Weight: {weight}</h2>
                     </div>
                 ))}
             </div>
